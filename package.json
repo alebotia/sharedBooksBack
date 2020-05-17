@@ -4,7 +4,8 @@
   "description": "Share books project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --icu-data-dir=node_modules\\full-icu index.js",
+    "start": "node --icu-data-dir=node_modules\\full-icu index.js",
+    "startLocal": "nodemon --icu-data-dir=node_modules\\full-icu index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
