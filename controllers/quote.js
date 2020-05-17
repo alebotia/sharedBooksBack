@@ -8,7 +8,7 @@ var Quote = require ('../models/quote');
 
 // every time the page is load the header will get a random quote
 async function getQuote(req, res){
-	// console.log('req user', req.user)
+	console.log('llega a quote')
 	let quote = await Quote.aggregate([
 					  {
 					    '$sample': {

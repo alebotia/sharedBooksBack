@@ -9,7 +9,8 @@ var app = require('./app')
 // puerto del servidor
 // var port = process.env.PORT || 3977;
 // utilizar variables del archivo de configuracion 
-var port = process.env.APP_PORT;
+// var port = process.env.APP_PORT; este es local
+var port = process.env.PORT; // este es heroku
 // quitar aviso de promesa de mongoose
 mongoose.Promise = global.Promise;
 // crear conexion y callback
