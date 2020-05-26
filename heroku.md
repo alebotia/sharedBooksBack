@@ -18,8 +18,9 @@ heroku run printenv -a shared-books-backend
 
 heroku restart // despues que la app crash
 
-
-cambiar al puerto que asigna heroku 
+## Solucion de: 
+https://dev.to/lawrence_eagles/causes-of-heroku-h10-app-crashed-error-and-how-to-solve-them-3jnl
+cambiar al puerto que asigna heroku // heroku pone un puerto diferente cada vez 
 
 yo le asigno 
 
@@ -29,3 +30,21 @@ heroku
 
 var port = process.env.PORT;
 
+de esta forma ya se puden hacer las peticiones y no es necesario especificar puerto 
+
+las peticiones al backend de heroku se hacen 
+
+https://shared-books-backend.herokuapp.com/api/quote
+
+
+## deploy del frontend 
+
+https://stackoverflow.com/questions/60834785/cant-deploy-a-project-to-heroku
+
+create react app genera un web server para desarrollo con webpack
+
+cuando se da el comando de inicio que trae por defecto heroku intenta correrlo y no puede para evitar esto 
+
+se debe adicionar un buildpack de heroku https://github.com/mars/create-react-app-buildpack
+
+se pude hacer el deploy como se hace desde la cuenta de github y en la opcion settings -> buildpacks adicionar la url del buildpack
